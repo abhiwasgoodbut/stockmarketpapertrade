@@ -1,0 +1,21 @@
+export const INDIAN_STOCKS = [
+  { name: "Reliance Industries", symbol: "RELIANCE.NS" },
+  { name: "TCS", symbol: "TCS.NS" },
+  { name: "Infosys", symbol: "INFY.NS" },
+  { name: "HDFC Bank", symbol: "HDFCBANK.NS" },
+  { name: "ICICI Bank", symbol: "ICICIBANK.NS" },
+  { name: "Axis Bank", symbol: "AXISBANK.NS" },
+  { name: "Kotak Mahindra Bank", symbol: "KOTAKBANK.NS" },
+  { name: "State Bank of India", symbol: "SBIN.NS" },
+  { name: "LT", symbol: "LT.NS" },
+  { name: "ITC", symbol: "ITC.NS" },
+  { name: "HUL", symbol: "HINDUNILVR.NS" },
+  { name: "Bharti Airtel", symbol: "BHARTIARTL.NS" },
+  { name: "Asian Paints", symbol: "ASIANPAINT.NS" },
+  { name: "Maruti Suzuki", symbol: "MARUTI.NS" },
+  { name: "Wipro", symbol: "WIPRO.NS" },
+  { name: "HCL Technologies", symbol: "HCLTECH.NS" },
+  { name: "Tech Mahindra", symbol: "TECHM.NS" },
+  { name: "Tata Motors", symbol: "TATAMOTORS.NS" },
+  { name: "UltraTech Cement", symbol: "ULTRACEMCO.NS" }
+];
