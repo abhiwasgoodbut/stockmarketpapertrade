@@ -126,12 +126,13 @@ JWT_SECRET=your_jwt_secret
 ---
 ## 📊 Key Learnings from This Project
 
-Trade execution logic
-Accurate PnL calculations
-Backend validation & error handling
-Secure authentication flow
-API design for financial applications
-Real-world state management in React
+- Trade execution logic
+- Accurate PnL calculations
+- Backend validation & error handling
+- Secure authentication flow
+- API design for financial applications
+- Real-world state management in React
+
 ---
 ## 👨‍💻 Developer
 
