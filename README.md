@@ -5,11 +5,9 @@ A **full-stack stock market trading web application** built using the **MERN sta
 This project focuses on **backend logic, secure authentication, real-time calculations, and clean frontend architecture**, making it suitable for learning and portfolio demonstration.
 
 ---
-
 ## 🚀 Live Demo
-Frontend: stockmarketpapertradefrontend.vercel.app
-  
-Backend: stockmarketpapertrade.vercel.app
+Frontend: https://stockmarketpapertradefrontend.vercel.app  
+Backend: https://stockmarketpapertrade.vercel.app
 
 
 ---
