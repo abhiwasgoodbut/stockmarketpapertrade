@@ -1,152 +1,145 @@
-📈 Stock Market Paper Trading Web Application
+# 📈 Stock Market Trading Web Application
 
-A full-stack stock market paper trading web application built using the MERN stack, designed to simulate real-world trading workflows such as placing trades, tracking positions, and calculating profit & loss (P&L).
+A **full-stack stock market trading web application** built using the **MERN stack**, designed to simulate real-world trading features such as order placement, portfolio tracking, and profit & loss (PnL) calculation.
 
-This project emphasizes backend logic, REST API design, authentication, and financial calculations, making it a strong demonstration of real-world full-stack development skills.
+This project focuses on **backend logic, secure authentication, real-time calculations, and clean frontend architecture**, making it suitable for learning and portfolio demonstration.
 
-🚀 Live Demo
+---
 
-Frontend: https://stockmarketpapertradefrontend.vercel.app
+## 🚀 Live Demo
+Frontend: stockmarketpapertradefrontend.vercel.app
+  
+Backend: stockmarketpapertrade.vercel.app
 
-Backend: Not publicly exposed
 
-🧰 Tech Stack
-Frontend
+---
 
-React.js
+## 🧰 Tech Stack
 
-JavaScript (ES6+)
+### Frontend
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Tailwind CSS
 
-HTML5, CSS3
+### Backend
+- Node.js
+- Express.js
+- REST APIs
 
-Axios
+### Database
+- MongoDB (Mongoose)
 
-Backend
+### Authentication
+- JWT (JSON Web Tokens)
 
-Node.js
+### Deployment
+- Vercel
 
-Express.js
+---
 
-REST APIs
+## ✨ Features
 
-Database
+### 👤 User Features
+- User authentication (Signup / Login)
+- Secure session handling with JWT
+- Place **Buy / Sell trades**
+- View open & closed trades
+- Real-time **PnL (Profit & Loss) calculation**
+- Portfolio balance tracking
+- Trade history
 
-MongoDB
+---
 
-Mongoose
+### ⚙️ Trading Logic
+- Market & limit order support
+- Quantity and price validation
+- Buy/Sell execution logic
+- Accurate PnL calculation
+- User balance updates after every trade
 
-Authentication
+---
 
-JWT (JSON Web Tokens)
+## 🔐 Security
+- JWT-based authentication
+- Protected API routes
+- User-specific trade isolation
+- Secure environment variable usage
 
-Deployment
+---
 
-Vercel (Frontend)
-
-✨ Features
-👤 User Features
-
-User registration and login
-
-JWT-based authentication
-
-Secure protected routes
-
-Account and profile management
-
-📊 Trading Features
-
-Place BUY and SELL paper trades
-
-Quantity and price validation
-
-Open and closed trade tracking
-
-Accurate per-trade P&L calculation
-
-Complete trade history
-
-⚙️ Backend Logic
-
-Server-side validation of trade data
-
-Centralized trade and P&L calculation logic
-
-Robust error handling
-
-Scalable REST API architecture
-
-🔐 Security
-
-JWT authentication
-
-Protected API routes
-
-Secure environment variables
-
-Server-side input validation
-
-📂 Project Structure
-Stock-Market-Paper-Trading/
+## 📂 Project Structure
+```bash
+Stock-Trading-App/
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── assets/
-│   └── package.json
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── context/
+│ │ └── assets/
+│ └── package.json
 │
 ├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── utils/
-│   └── server.js
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── utils/
+│ └── server.js
 │
 └── README.md
+```
 
-⚙️ Installation & Setup
-Clone the repository
-git clone https://github.com/yourusername/stock-market-paper-trading.git
-cd stock-market-paper-trading
+---
 
-Frontend setup
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/stock-trading-app.git
+cd stock-trading-app
+```
+### 2️⃣ Install dependencies
+Frontend
+```bash
 cd frontend
 npm install
 npm run dev
-
-Backend setup
+```
+Backend
+```bash
 cd backend
 npm install
 npm start
+```
+---
+## 🔑 Environment Variables
 
-Environment Variables
-
-Create a .env file inside the backend folder:
-
+### Create a .env file in the backend directory:
+```bash
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+```
+---
+## 📊 Key Learnings from This Project
 
-📌 Key Highlights
-
-Realistic paper trading workflow
-
-Accurate profit & loss calculations
-
-Clean REST API design
-
-Backend-focused implementation
-
-Practical financial application logic
-
-👨‍💻 Developer
+Trade execution logic
+Accurate PnL calculations
+Backend validation & error handling
+Secure authentication flow
+API design for financial applications
+Real-world state management in React
+---
+## 👨‍💻 Developer
 
 Abhinay Singh
-Full-Stack MERN Developer
+MERN Stack Full-Stack Developer
 
 Email: sabhinay@gmail.com
 
 GitHub: https://github.com/abhiwasgoodbut
+
+
