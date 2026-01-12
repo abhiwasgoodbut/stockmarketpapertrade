@@ -25,7 +25,7 @@ import SLTP from './pages/SLTP.jsx'
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />} >
-      <Route path='home' element={<Home/>}/>
+      <Route path='' element={<Home/>}/>
       <Route path='position' element={<Position/>}/>
       <Route path='sl-tp' element={<SLTP/>}/>
       {/* <Route path='trades' element={<Trades/>}/> */}
