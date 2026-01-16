@@ -50,7 +50,7 @@ const Router = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
     <StrictMode>
     <AppContextProvider>
-      <RouterProvider router={Router} />
+      <RouterProvider router={Router} />    
     </AppContextProvider>
   </StrictMode>,
 )

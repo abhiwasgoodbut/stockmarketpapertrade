@@ -24,7 +24,7 @@ const Navbottom = () => {
 
       {/* CENTER BUTTON */}
 
-      <NavLink to="/home" className={({ isActive }) =>
+      <NavLink to="/" className={({ isActive }) =>
         `${base} ${isActive ? "text-blue-700" : "text-gray-500"}`
       }>
         <FaBookmark className="text-xl mb-1" />
