@@ -68,7 +68,7 @@ const Auth = () => {
 
       localStorage.setItem("token", data.token);
       setToken(data.token);
-      navigate('/home')
+      navigate('/')
 
       toast.success(isLogin ? "Login successful" : "Account created");
 

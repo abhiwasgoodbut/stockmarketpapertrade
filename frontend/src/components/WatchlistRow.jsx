@@ -80,16 +80,12 @@ const WatchlistRow = ({ item }) => {
         <div className="text-center">
           <div
             className={`cursor-pointer font-semibold py-2 rounded-md text-sm transition-colors duration-300 ${
-              bidFlash === "up"
-                ? "bg-green-500 text-white"
-                : bidFlash === "down"
-                ? "bg-red-500 text-white"
-                : "bg-gray-500 text-white"
-            }`}
+              bidFlash === "up" ? "bg-green-500" : bidFlash === "down" ? "bg-red-500" : "bg-gray-500"
+            } text-white`}
           >
             {item.bid}
           </div>
-          <p className="text-[11px] mt-0.5">
+          <p className="text-[11px] mt-0.5 text-green-600 font-medium">
             H: {item.high}
           </p>
         </div>
@@ -98,16 +94,12 @@ const WatchlistRow = ({ item }) => {
         <div className="text-center">
           <div
             className={`font-semibold py-2 rounded-md text-sm transition-colors duration-300 ${
-              askFlash === "up"
-                ? "bg-green-500 text-white"
-                : askFlash === "down"
-                ? "bg-red-500 text-white"
-                : "bg-gray-500 text-white"
-            }`}
+              askFlash === "up" ? "bg-green-500" : askFlash === "down" ? "bg-red-500" : "bg-gray-500"
+            } text-white`}
           >
             {item.ask}
           </div>
-          <p className="text-[11px] mt-0.5">
+          <p className="text-[11px] mt-0.5 text-red-600 font-medium">
             L: {item.low}
           </p>
         </div>

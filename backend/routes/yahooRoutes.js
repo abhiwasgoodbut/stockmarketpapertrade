@@ -4,7 +4,7 @@ import { getWatchlist, getWatchlistFake } from "../controllers/marketController.
 
 const yahooRouter = express.Router();
 
-// yahooRouter.post('/data', getWatchlist)
+yahooRouter.post('/data', getWatchlist)
 yahooRouter.post('/fake', getWatchlistFake)
 
 export default yahooRouter;

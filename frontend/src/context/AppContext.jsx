@@ -55,9 +55,11 @@ export const AppContextProvider = ({ children }) => {
   const fetchWatchListData = async () => {
     try {
       const symbols = watchlistData.map(i => i.symbol);
+      console.log(symbols);
+      
       if (!symbols.length) return;
 
-      const { data } = await axios.post("/api/watchlist/fake", { symbols });
+      const { data } = await axios.post("/api/watchlist/data", { symbols });
 
       if (data.success) {
         setWatchlistData(prev => {
