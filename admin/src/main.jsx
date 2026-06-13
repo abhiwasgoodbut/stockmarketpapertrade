@@ -14,7 +14,7 @@ import AdminTrade from "../pages/AdminTrade.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path='admin' element={<AdminDashboard/>}/>
+      <Route path='' element={<AdminDashboard/>}/>
       <Route path='users' element={<AdminUser/>}/>
       <Route path='deposit' element={<AdminDeposit/>}/>
       <Route path='withdraw' element={<AdminWithdraw/>}/>
