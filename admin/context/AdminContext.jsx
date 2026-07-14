@@ -1,25 +1,7 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
-
-// Automatically handle invalid or expired tokens globally
-axios.interceptors.response.use(
-  (response) => {
-    if (
-      response.data &&
-      response.data.success === false &&
-      (response.data.message === "Invalid or expired admin token" ||
-        response.data.message === "Admin not authorized" ||
-        response.data.message === "Admin access denied")
-    ) {
-      localStorage.removeItem("adminToken");
-      window.location.href = "/"; // Redirect to login
-    }
-    return response;
-  },
-  (error) => Promise.reject(error)
-);
 
 const AdminContext = createContext();
 
@@ -41,6 +23,28 @@ export const AdminContextProvider = ({ children }) => {
     localStorage.removeItem("adminToken");
     setAdminToken(null);
   };
+
+  useEffect(() => {
+    const interceptor = axios.interceptors.response.use(
+      (response) => {
+        if (
+          response.data &&
+          response.data.success === false &&
+          (response.data.message === "Invalid or expired admin token" ||
+            response.data.message === "Admin not authorized" ||
+            response.data.message === "Admin access denied")
+        ) {
+          adminLogout();
+        }
+        return response;
+      },
+      (error) => Promise.reject(error)
+    );
+
+    return () => {
+      axios.interceptors.response.eject(interceptor);
+    };
+  }, []);
 
   return (
     <AdminContext.Provider
