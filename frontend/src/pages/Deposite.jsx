@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
+import paymentQr from "../assets/payment_qr.jpg";
 
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
@@ -75,19 +76,28 @@ const Deposit = () => {
         <div className="bg-white rounded-xl shadow p-6 space-y-4">
           <h2 className="font-semibold text-lg">Payment Details</h2>
 
-          <div className="h-56 border-2 border-dashed rounded-lg flex items-center justify-center text-gray-400">
-            QR IMAGE (Admin Controlled)
+          <div className="flex flex-col items-center justify-center p-4 bg-gray-50 border rounded-lg">
+            <img src={paymentQr} alt="UPI Payment QR Code" className="w-56 h-56 object-contain rounded-lg shadow-sm border bg-white" />
+            <p className="text-xs text-gray-500 mt-2">Scan QR Code to Pay</p>
           </div>
 
-          <div className="text-sm text-gray-700 space-y-1">
-            <p><b>Bank Name:</b> —</p>
-            <p><b>A/C Holder:</b> —</p>
-            <p><b>A/C Number:</b> —</p>
-            <p><b>IFSC:</b> —</p>
+          <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 space-y-2">
+            <p className="text-sm text-gray-700 flex justify-between items-center">
+              <span><b>UPI ID:</b> <span className="font-mono text-blue-700 select-all font-semibold ml-1">Q340936975@ybl</span></span>
+              <button 
+                onClick={() => {
+                  navigator.clipboard.writeText("Q340936975@ybl");
+                  toast.success("UPI ID copied!");
+                }}
+                className="text-xs bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-500 transition active:scale-95"
+              >
+                Copy
+              </button>
+            </p>
           </div>
 
-          <p className="text-xs text-red-600">
-            Please verify details before depositing
+          <p className="text-xs text-red-600 text-center font-medium">
+            Please verify details before depositing. Upload transaction proof below.
           </p>
         </div>
 
